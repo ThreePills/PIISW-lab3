@@ -1,0 +1,24 @@
+W Postman skonfigurowano mock serwera, środowisko oraz przykładowe odpowiedzi na requesty
+Wyniki w zrzucie ekranu
+- konfiguracja przykładowych 2 odpowiedzi w zrzutach
+- konfiguracja środowiska w zrzutach
+
+//TESTY:
+
+pm.test("Status code is 200", function () { pm.response.to.have.status(200); });
+pm.test("Body is 'aaaa'", function () {pm.response.to.have.body('"aaaa"'); });
+
+pm.test("Status code is 400", function () { pm.response.to.have.status(400); });
+pm.test("Body is BAD REQUEST", function () {pm.response.to.have.body('"BAD REQUEST"'); });
+
+pm.test("Status code is 200", function () { pm.response.to.have.status(200); });
+pm.test("Body is 'json content'", function () {pm.response.to.have.body('{\n\t"name": "aaa"\n}'); });
+
+pm.test("Status code is 400", function () { pm.response.to.have.status(400); });
+pm.test("Body is ERROR MSG", function () {pm.response.to.have.body('BAD REQUEST'); });
+
+pm.test("Status code is 200", function () { pm.response.to.have.status(200); });
+pm.test("Body is PUT OK", function () {pm.response.to.have.body('PUT OK'); });
+
+pm.test("Status code is 400", function () { pm.response.to.have.status(400); });
+pm.test("ERROR", function () {pm.response.to.have.body('ERROR'); });
