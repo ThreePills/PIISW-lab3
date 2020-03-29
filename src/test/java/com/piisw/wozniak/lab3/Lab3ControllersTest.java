@@ -103,7 +103,7 @@ class Lab3ControllersTest {
 
     @Test
     public void testPutNotFound() {
-        String controllerUri = "/rest/put/";
+        String controllerUri = "/rest/p/";
         ResponseEntity responseEntity = this.testRestTemplate.exchange(createUrlWithUri(controllerUri), HttpMethod.PUT, new HttpEntity<>("aaa"), String.class);
         assertEquals(HttpStatus.NOT_FOUND, responseEntity.getStatusCode());
     }
