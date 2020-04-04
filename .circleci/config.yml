@@ -17,6 +17,3 @@ jobs:
     steps:
       - checkout
       - run: ./mvnw install      
-      
-    store_test_results:
-      path: test-results
