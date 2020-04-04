@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "76294e2d-cc23-4f3c-a44d-a1f10ddd3629",
+		"name": "PIISW",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET - 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c2500c96-7b41-490f-905d-48bcb33fff48",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });",
+							"pm.test(\"Body is 'GET response'\", function () {pm.response.to.have.body('GET response');});",
+							"",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/rest/get/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"get",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get - 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c77ce3bb-25b6-495f-8e43-3ccf08f91ea7",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () { pm.response.to.have.status(404); });",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followOriginalHttpMethod": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/rest/g",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"g"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0148d1c6-e2ae-4f45-8bb6-aa5e596d34a2",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });",
+							"pm.test(\"Body is 'POST response'\", function () {pm.response.to.have.body('POST response');});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"body body\""
+				},
+				"url": {
+					"raw": "localhost:8080/rest/post/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"post",
+						""
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "value",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a75a41a3-583c-4458-a331-ae30b270676d",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () { pm.response.to.have.status(404)});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "dsf",
+						"value": "fc",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"sss\""
+				},
+				"url": {
+					"raw": "localhost:8080/rest/pos/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"pos",
+						""
+					],
+					"query": [
+						{
+							"key": "aa",
+							"value": "\"gg\"",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a4363c6e-1908-46df-bde8-faaacc93165c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });",
+							"pm.test(\"Body is 'PUT response'\", function () {pm.response.to.have.body('PUT response')});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"byd body\""
+				},
+				"url": {
+					"raw": "localhost:8080/rest/put/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"put",
+						""
+					],
+					"query": [
+						{
+							"key": "sss",
+							"value": "\"ss\"",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a4363c6e-1908-46df-bde8-faaacc93165c",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () { pm.response.to.have.status(404); });",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/rest/p",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"p"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0a95f175-bf6f-47b2-b57e-f174270bb973",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "91169348-6974-4460-9c8f-351a588a1955",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
