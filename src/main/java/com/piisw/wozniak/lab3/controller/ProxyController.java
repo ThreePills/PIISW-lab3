@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
-
 @RestController
 @RequestMapping ("rest")
 public class ProxyController {

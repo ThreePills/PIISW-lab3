@@ -17,7 +17,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class WiremockServers {
 
-
         private Integer getPort;
         private Integer putPort;
         private Integer postPort;
